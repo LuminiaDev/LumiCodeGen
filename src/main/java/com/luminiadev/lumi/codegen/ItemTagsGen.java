@@ -9,69 +9,87 @@ import javax.lang.model.element.Modifier;
 import java.io.InputStreamReader;
 import java.nio.file.Path;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class ItemTagsGen {
 
     private static final Gson GSON = new Gson();
+    private static final ClassName ITEM_TAG_CLASS = ClassName.get("cn.nukkit.item.material.tags", "ItemTag");
+    private static final ClassName LAZY_ITEM_TAG_CLASS = ClassName.get("cn.nukkit.item.material.tags.impl", "LazyItemTag");
 
     @SneakyThrows
     public static void generate() {
-        ClassName itemTagClass = ClassName.get("cn.nukkit.item.material.tags", "ItemTag");
-        ClassName lazyItemTagClass = ClassName.get("cn.nukkit.item.material.tags.impl", "LazyItemTag");
+        List<String> itemTags = prepareItemTags();
 
-        Map<String, Set<String>> vanillaItemTags = getVanillaItemTags();
-        List<String> itemTags = new ArrayList<>(vanillaItemTags.keySet());
-        itemTags.sort(Comparator.naturalOrder());
-
-        TypeSpec.Builder builder = TypeSpec.classBuilder("ItemTags")
+        TypeSpec itemTagsClass = TypeSpec.classBuilder("ItemTags")
                 .addJavadoc("This class is generated automatically, do not change it manually.")
-                .addModifiers(Modifier.PUBLIC, Modifier.FINAL);
+                .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
+                .addFields(createMapFields())
+                .addFields(createTagConstants(itemTags))
+                .addMethods(createUtilityMethods())
+                .build();
 
-        // Adding NAME_2_TAG and BLOCK_2_TAGS map field
-        builder.addField(FieldSpec.builder(
+        JavaFile javaFile = JavaFile.builder("cn.nukkit.item.material.tags", itemTagsClass)
+                .indent("    ")
+                .skipJavaLangImports(true)
+                .build();
+        javaFile.writeTo(Path.of("generated/"));
+    }
+
+    private static List<String> prepareItemTags() {
+        Map<String, Set<String>> vanillaItemTags = getVanillaItemTags();
+        return vanillaItemTags.keySet().stream()
+                .sorted()
+                .collect(Collectors.toList());
+    }
+
+    private static List<FieldSpec> createMapFields() {
+        return List.of(
+                FieldSpec.builder(
+                                ParameterizedTypeName.get(
+                                        ClassName.get("java.util", "Map"),
+                                        ClassName.get(String.class),
+                                        ITEM_TAG_CLASS
+                                ),
+                                "NAME_2_TAG",
+                                Modifier.PRIVATE, Modifier.STATIC, Modifier.FINAL)
+                        .initializer("new $T<>()", ClassName.get("java.util", "HashMap"))
+                        .build(),
+                FieldSpec.builder(
+                                ParameterizedTypeName.get(
+                                        ClassName.get("java.util", "Map"),
+                                        ClassName.get(String.class),
                                         ParameterizedTypeName.get(
-                                                ClassName.get("java.util", "Map"),
-                                                ClassName.get(String.class),
-                                                itemTagClass
-                                        ),
-                                        "NAME_2_TAG",
-                                        Modifier.PRIVATE, Modifier.STATIC, Modifier.FINAL
-                                )
-                                .initializer("new $T<>()", ClassName.get("java.util", "HashMap"))
-                                .build()
-                )
-                .addField(FieldSpec.builder(
-                                        ParameterizedTypeName.get(
-                                                ClassName.get("java.util", "Map"),
-                                                ClassName.get(String.class),
-                                                ParameterizedTypeName.get(
-                                                        ClassName.get("java.util", "Set"),
-                                                        itemTagClass
-                                                )
-                                        ),
-                                        "ITEM_2_TAGS",
-                                        Modifier.PRIVATE, Modifier.STATIC, Modifier.FINAL
-                                )
-                                .initializer("new $T<>()", ClassName.get("java.util", "HashMap"))
-                                .build()
-                );
+                                                ClassName.get("java.util", "Set"),
+                                                ITEM_TAG_CLASS
+                                        )
+                                ),
+                                "ITEM_2_TAGS",
+                                Modifier.PRIVATE, Modifier.STATIC, Modifier.FINAL)
+                        .initializer("new $T<>()", ClassName.get("java.util", "HashMap"))
+                        .build()
+        );
+    }
 
-        // Adding item tags constants
-        for (String itemTag : itemTags) {
-            String name = itemTag.split(":")[1].toUpperCase();
-            builder.addField(FieldSpec.builder(itemTagClass, name)
-                    .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
-                    .initializer("register($S, new $T($S))", itemTag, lazyItemTagClass, itemTag)
-                    .build()
-            );
-        }
+    private static List<FieldSpec> createTagConstants(List<String> itemTags) {
+        return itemTags.stream()
+                .map(itemTag -> {
+                    String name = itemTag.split(":")[1].toUpperCase();
+                    return FieldSpec.builder(ITEM_TAG_CLASS, name)
+                            .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+                            .initializer("register($S, new $T($S))", itemTag, LAZY_ITEM_TAG_CLASS, itemTag)
+                            .build();
+                })
+                .collect(Collectors.toList());
+    }
 
-        // Adding register and getter methods
-        builder.addMethod(MethodSpec.methodBuilder("register")
+    private static List<MethodSpec> createUtilityMethods() {
+        return List.of(
+                MethodSpec.methodBuilder("register")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
-                        .returns(itemTagClass)
+                        .returns(ITEM_TAG_CLASS)
                         .addParameter(String.class, "tagName")
-                        .addParameter(itemTagClass, "itemTag")
+                        .addParameter(ITEM_TAG_CLASS, "itemTag")
                         .beginControlFlow("if (NAME_2_TAG.containsKey(tagName))")
                         .addStatement("throw new IllegalArgumentException($S + tagName + $S)", "Item tag ", " is already registered")
                         .endControlFlow()
@@ -82,33 +100,24 @@ public class ItemTagsGen {
                                 ClassName.get("java.util", "HashSet"))
                         .endControlFlow()
                         .addStatement("return itemTag")
-                        .build()
-                )
-                .addMethod(MethodSpec.methodBuilder("getTagsSet")
+                        .build(),
+                MethodSpec.methodBuilder("getTagsSet")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                         .returns(ParameterizedTypeName.get(
                                 ClassName.get("java.util", "Set"),
-                                itemTagClass
+                                ITEM_TAG_CLASS
                         ))
                         .addParameter(String.class, "identifier")
                         .addStatement("return ITEM_2_TAGS.getOrDefault(identifier, $T.emptySet())",
                                 ClassName.get("java.util", "Collections"))
-                        .build()
-                )
-                .addMethod(MethodSpec.methodBuilder("getTag")
+                        .build(),
+                MethodSpec.methodBuilder("getTag")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
-                        .returns(itemTagClass)
+                        .returns(ITEM_TAG_CLASS)
                         .addParameter(String.class, "tagName")
                         .addStatement("return NAME_2_TAG.get(tagName)")
                         .build()
-                )
-                .build();
-
-        JavaFile javaFile = JavaFile.builder("cn.nukkit.item.material.tags", builder.build())
-                .indent("    ")
-                .skipJavaLangImports(true)
-                .build();
-        javaFile.writeTo(Path.of("generated/"));
+        );
     }
 
     @SneakyThrows
