@@ -12,14 +12,13 @@ import javax.lang.model.element.Modifier;
 import java.io.InputStreamReader;
 import java.nio.file.Path;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class SoundEnumGen {
 
     private static final Gson GSON = new Gson();
 
     @SneakyThrows
-    public static void main(String[] args) {
+    public static void generate() {
         List<String> sounds = new ArrayList<>();
         sounds.addAll(getSoundNames());
         sounds.addAll(getMusicNames());
