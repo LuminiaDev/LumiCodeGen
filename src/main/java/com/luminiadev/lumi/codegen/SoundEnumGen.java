@@ -52,7 +52,7 @@ public class SoundEnumGen {
 
     @SneakyThrows
     private static Set<String> getSoundNames() {
-        var inputStream = SoundEnumGen.class.getClassLoader().getResourceAsStream("data/sound_definitions.json");
+        var inputStream = SoundEnumGen.class.getClassLoader().getResourceAsStream("data/pack/sound_definitions.json");
         if (inputStream != null) {
             try (var reader = new InputStreamReader(inputStream)) {
                 return JsonParser.parseReader(reader)
@@ -67,7 +67,7 @@ public class SoundEnumGen {
 
     @SneakyThrows
     private static Set<String> getMusicNames() {
-        var inputStream = SoundEnumGen.class.getClassLoader().getResourceAsStream("data/music_definitions.json");
+        var inputStream = SoundEnumGen.class.getClassLoader().getResourceAsStream("data/pack/music_definitions.json");
         if (inputStream != null) {
             try (var reader = new InputStreamReader(inputStream)) {
                 var musicNames = new HashSet<String>();
