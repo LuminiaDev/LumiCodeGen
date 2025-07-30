@@ -70,7 +70,7 @@ public class BlockTypeGen {
                                         ClassName.get("it.unimi.dsi.fastutil.ints", "Int2ObjectMap"),
                                         BLOCK_TYPE_CLASS
                                 ),
-                                "LEGACY_TO_TYPE",
+                                "RUNTIME_TO_TYPE",
                                 Modifier.PRIVATE, Modifier.STATIC, Modifier.FINAL)
                         .initializer("new $T<>()", ClassName.get("it.unimi.dsi.fastutil.ints", "Int2ObjectOpenHashMap"))
                         .build(),
@@ -96,7 +96,7 @@ public class BlockTypeGen {
                                     BLOCK_TYPE_CLASS,
                                     finalName,
                                     Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
-                            .initializer("register($S, $L)", entry.identifier, entry.legacyId)
+                            .initializer("register($S, $L)", entry.identifier, entry.runtimeId)
                             .build();
                 })
                 .collect(Collectors.toList());
@@ -108,17 +108,17 @@ public class BlockTypeGen {
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                         .returns(BLOCK_TYPE_CLASS)
                         .addParameter(String.class, "identifier")
-                        .addParameter(TypeName.INT, "legacyId")
-                        .addStatement("return register(new BlockTypeImpl(identifier, legacyId))")
+                        .addParameter(TypeName.INT, "runtimeId")
+                        .addStatement("return register(new BlockTypeImpl(identifier, runtimeId))")
                         .build(),
                 MethodSpec.methodBuilder("register")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                         .returns(BLOCK_TYPE_CLASS)
                         .addParameter(BLOCK_TYPE_CLASS, "blockType")
                         .addStatement("BlockType oldType = ID_TO_TYPE.get(blockType.getIdentifier())")
-                        .addStatement("LEGACY_TO_TYPE.putIfAbsent(blockType.getLegacyId(), blockType)")
+                        .addStatement("RUNTIME_TO_TYPE.putIfAbsent(blockType.getRuntimeId(), blockType)")
                         .addStatement("ID_TO_TYPE.putIfAbsent(blockType.getIdentifier(), blockType)")
-                        .addStatement("$T.register(blockType.getIdentifier(), blockType.getLegacyId())",
+                        .addStatement("$T.register(blockType.getIdentifier(), blockType.getRuntimeId())",
                                 ClassName.get("cn.nukkit.item.material", "ItemTypes"))
                         .addStatement("return oldType != null ? oldType : blockType")
                         .build(),
@@ -128,11 +128,11 @@ public class BlockTypeGen {
                         .addParameter(String.class, "identifier")
                         .addStatement("return ID_TO_TYPE.get(identifier)")
                         .build(),
-                MethodSpec.methodBuilder("getFromLegacy")
+                MethodSpec.methodBuilder("getFromRuntime")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                         .returns(BLOCK_TYPE_CLASS)
-                        .addParameter(TypeName.INT, "legacyId")
-                        .addStatement("return LEGACY_TO_TYPE.get(legacyId)")
+                        .addParameter(TypeName.INT, "runtimeId")
+                        .addStatement("return RUNTIME_TO_TYPE.get(runtimeId)")
                         .build()
         );
     }
@@ -143,7 +143,7 @@ public class BlockTypeGen {
                 .addSuperinterface(BLOCK_TYPE_CLASS)
                 .addAnnotation(Data.class)
                 .addField(FieldSpec.builder(String.class, "identifier", Modifier.PRIVATE, Modifier.FINAL).build())
-                .addField(FieldSpec.builder(TypeName.INT, "legacyId", Modifier.PRIVATE, Modifier.FINAL).build())
+                .addField(FieldSpec.builder(TypeName.INT, "runtimeId", Modifier.PRIVATE, Modifier.FINAL).build())
                 .build();
     }
 
@@ -181,7 +181,7 @@ public class BlockTypeGen {
         return new HashMap<>();
     }
 
-    private record BlockEntry(String identifier, int legacyId, boolean item) implements Comparable<BlockEntry> {
+    private record BlockEntry(String identifier, int runtimeId, boolean item) implements Comparable<BlockEntry> {
         @Override
         public int compareTo(@NonNull BlockEntry entry) {
             return this.identifier.compareTo(entry.identifier);

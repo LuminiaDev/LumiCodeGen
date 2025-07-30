@@ -57,7 +57,7 @@ public class ItemTypeGen {
                                         ClassName.get("it.unimi.dsi.fastutil.ints", "Int2ObjectMap"),
                                         ITEM_TYPE_CLASS
                                 ),
-                                "LEGACY_TO_TYPE",
+                                "RUNTIME_TO_TYPE",
                                 Modifier.PRIVATE, Modifier.STATIC, Modifier.FINAL)
                         .initializer("new $T<>()", ClassName.get("it.unimi.dsi.fastutil.ints", "Int2ObjectOpenHashMap"))
                         .build(),
@@ -82,7 +82,7 @@ public class ItemTypeGen {
                                     ITEM_TYPE_CLASS,
                                     name,
                                     Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
-                            .initializer("register($S, $L)", entry.identifier, entry.legacyId)
+                            .initializer("register($S, $L)", entry.identifier, entry.runtimeId)
                             .build();
                 })
                 .collect(Collectors.toList());
@@ -94,15 +94,15 @@ public class ItemTypeGen {
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                         .returns(ITEM_TYPE_CLASS)
                         .addParameter(String.class, "identifier")
-                        .addParameter(TypeName.INT, "legacyId")
-                        .addStatement("return register(new ItemTypeImpl(identifier, legacyId))")
+                        .addParameter(TypeName.INT, "runtimeId")
+                        .addStatement("return register(new ItemTypeImpl(identifier, runtimeId))")
                         .build(),
                 MethodSpec.methodBuilder("register")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                         .returns(ITEM_TYPE_CLASS)
                         .addParameter(ITEM_TYPE_CLASS, "itemType")
                         .addStatement("ItemType oldType = ID_TO_TYPE.get(itemType.getIdentifier())")
-                        .addStatement("LEGACY_TO_TYPE.putIfAbsent(itemType.getLegacyId(), itemType)")
+                        .addStatement("RUNTIME_TO_TYPE.putIfAbsent(itemType.getRuntimeId(), itemType)")
                         .addStatement("ID_TO_TYPE.putIfAbsent(itemType.getIdentifier(), itemType)")
                         .addStatement("return oldType != null ? oldType : itemType")
                         .build(),
@@ -112,11 +112,11 @@ public class ItemTypeGen {
                         .addParameter(String.class, "identifier")
                         .addStatement("return ID_TO_TYPE.get(identifier)")
                         .build(),
-                MethodSpec.methodBuilder("getFromLegacy")
+                MethodSpec.methodBuilder("getFromRuntime")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                         .returns(ITEM_TYPE_CLASS)
-                        .addParameter(TypeName.INT, "legacyId")
-                        .addStatement("return LEGACY_TO_TYPE.get(legacyId)")
+                        .addParameter(TypeName.INT, "runtimeId")
+                        .addStatement("return RUNTIME_TO_TYPE.get(runtimeId)")
                         .build()
         );
     }
@@ -127,7 +127,7 @@ public class ItemTypeGen {
                 .addSuperinterface(ITEM_TYPE_CLASS)
                 .addAnnotation(Data.class)
                 .addField(FieldSpec.builder(String.class, "identifier", Modifier.PRIVATE, Modifier.FINAL).build())
-                .addField(FieldSpec.builder(TypeName.INT, "legacyId", Modifier.PRIVATE, Modifier.FINAL).build())
+                .addField(FieldSpec.builder(TypeName.INT, "runtimeId", Modifier.PRIVATE, Modifier.FINAL).build())
                 .build();
     }
 
@@ -144,7 +144,7 @@ public class ItemTypeGen {
         return new HashMap<>();
     }
 
-    private record ItemEntry(String identifier, int legacyId) implements Comparable<ItemEntry> {
+    private record ItemEntry(String identifier, int runtimeId) implements Comparable<ItemEntry> {
         @Override
         public int compareTo(@NonNull ItemEntry entry) {
             return this.identifier.compareTo(entry.identifier);
