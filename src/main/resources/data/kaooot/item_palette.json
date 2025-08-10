@@ -751,6 +751,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:copper_sword",
+      "id": 769,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:element_68",
       "id": -79,
       "version": 2,
@@ -944,7 +950,7 @@
     },
     {
       "name": "minecraft:wooden_slab",
-      "id": 787,
+      "id": 798,
       "version": 2,
       "component_based": false
     },
@@ -1454,7 +1460,7 @@
     },
     {
       "name": "minecraft:music_disc_creator_music_box",
-      "id": 802,
+      "id": 813,
       "version": 2,
       "component_based": true
     },
@@ -1532,7 +1538,7 @@
     },
     {
       "name": "minecraft:planks",
-      "id": 790,
+      "id": 801,
       "version": 2,
       "component_based": false
     },
@@ -1550,7 +1556,7 @@
     },
     {
       "name": "minecraft:stained_glass_pane",
-      "id": 798,
+      "id": 809,
       "version": 2,
       "component_based": false
     },
@@ -2168,7 +2174,7 @@
     },
     {
       "name": "minecraft:carpet",
-      "id": 769,
+      "id": 780,
       "version": 2,
       "component_based": false
     },
@@ -2515,12 +2521,6 @@
       "component_based": false
     },
     {
-      "name": "minecraft:hard_magenta_stained_glass_pane",
-      "id": -659,
-      "version": 2,
-      "component_based": false
-    },
-    {
       "name": "minecraft:polished_granite_stairs",
       "id": -172,
       "version": 2,
@@ -2540,7 +2540,7 @@
     },
     {
       "name": "minecraft:chemistry_table",
-      "id": 806,
+      "id": 817,
       "version": 2,
       "component_based": false
     },
@@ -2665,16 +2665,16 @@
       "component_based": false
     },
     {
-      "name": "minecraft:sugar_cane",
-      "id": 411,
-      "version": 2,
-      "component_based": true
-    },
-    {
       "name": "minecraft:hard_lime_stained_glass_pane",
       "id": -662,
       "version": 2,
       "component_based": false
+    },
+    {
+      "name": "minecraft:sugar_cane",
+      "id": 411,
+      "version": 2,
+      "component_based": true
     },
     {
       "name": "minecraft:paper",
@@ -2720,7 +2720,7 @@
     },
     {
       "name": "minecraft:coral",
-      "id": 791,
+      "id": 802,
       "version": 2,
       "component_based": false
     },
@@ -2846,7 +2846,7 @@
     },
     {
       "name": "minecraft:shulker_box",
-      "id": 799,
+      "id": 810,
       "version": 2,
       "component_based": false
     },
@@ -3098,7 +3098,7 @@
     },
     {
       "name": "minecraft:stained_glass",
-      "id": 797,
+      "id": 808,
       "version": 2,
       "component_based": false
     },
@@ -3177,12 +3177,6 @@
     {
       "name": "minecraft:bone_meal",
       "id": 437,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:hard_white_stained_glass_pane",
-      "id": 191,
       "version": 2,
       "component_based": false
     },
@@ -3349,6 +3343,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:hard_red_stained_glass",
+      "id": -701,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:ender_pearl",
       "id": 448,
       "version": 2,
@@ -3357,12 +3357,6 @@
     {
       "name": "minecraft:smooth_stone_double_slab",
       "id": 43,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:hard_red_stained_glass",
-      "id": -701,
       "version": 2,
       "component_based": false
     },
@@ -3500,7 +3494,7 @@
     },
     {
       "name": "minecraft:colored_torch_rg",
-      "id": 809,
+      "id": 820,
       "version": 2,
       "component_based": false
     },
@@ -3710,7 +3704,7 @@
     },
     {
       "name": "minecraft:double_plant",
-      "id": 789,
+      "id": 800,
       "version": 2,
       "component_based": false
     },
@@ -4196,7 +4190,7 @@
     },
     {
       "name": "minecraft:double_stone_block_slab3",
-      "id": 780,
+      "id": 791,
       "version": 2,
       "component_based": false
     },
@@ -4370,7 +4364,7 @@
     },
     {
       "name": "minecraft:colored_torch_bp",
-      "id": 810,
+      "id": 821,
       "version": 2,
       "component_based": false
     },
@@ -4700,7 +4694,13 @@
     },
     {
       "name": "minecraft:coral_fan_dead",
-      "id": 783,
+      "id": 794,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_axe",
+      "id": 772,
       "version": 2,
       "component_based": false
     },
@@ -4742,7 +4742,7 @@
     },
     {
       "name": "minecraft:monster_egg",
-      "id": 794,
+      "id": 805,
       "version": 2,
       "component_based": false
     },
@@ -4802,7 +4802,7 @@
     },
     {
       "name": "minecraft:boat",
-      "id": 812,
+      "id": 823,
       "version": 2,
       "component_based": false
     },
@@ -4881,12 +4881,6 @@
     {
       "name": "minecraft:medicine",
       "id": 636,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:hard_light_blue_stained_glass_pane",
-      "id": -660,
       "version": 2,
       "component_based": false
     },
@@ -5006,7 +5000,7 @@
     },
     {
       "name": "minecraft:concrete",
-      "id": 795,
+      "id": 806,
       "version": 2,
       "component_based": false
     },
@@ -5335,6 +5329,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_exposed_copper_chest",
+      "id": -1036,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:cherry_boat",
       "id": 686,
       "version": 2,
@@ -5462,7 +5462,7 @@
     },
     {
       "name": "minecraft:double_stone_block_slab",
-      "id": 778,
+      "id": 789,
       "version": 2,
       "component_based": false
     },
@@ -5648,7 +5648,7 @@
     },
     {
       "name": "minecraft:wool",
-      "id": 768,
+      "id": 779,
       "version": 2,
       "component_based": false
     },
@@ -5781,6 +5781,12 @@
     {
       "name": "minecraft:white_terracotta",
       "id": 159,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_nugget",
+      "id": 778,
       "version": 2,
       "component_based": false
     },
@@ -5966,7 +5972,7 @@
     },
     {
       "name": "minecraft:stone_block_slab4",
-      "id": 777,
+      "id": 788,
       "version": 2,
       "component_based": false
     },
@@ -6038,7 +6044,7 @@
     },
     {
       "name": "minecraft:double_stone_block_slab2",
-      "id": 779,
+      "id": 790,
       "version": 2,
       "component_based": false
     },
@@ -6187,6 +6193,150 @@
       "component_based": false
     },
     {
+      "name": "minecraft:shroomlight",
+      "id": -230,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_golem_spawn_egg",
+      "id": 768,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_shovel",
+      "id": 770,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:hard_gray_stained_glass",
+      "id": -694,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:trip_wire",
+      "id": 132,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_pickaxe",
+      "id": 771,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:brick_slab",
+      "id": -874,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:dead_horn_coral_fan",
+      "id": -847,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:cave_vines_body_with_berries",
+      "id": -375,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:sandstone_stairs",
+      "id": 128,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_hoe",
+      "id": 773,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:light_block_2",
+      "id": -930,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_helmet",
+      "id": 774,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:spruce_standing_sign",
+      "id": -181,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_chestplate",
+      "id": 775,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:sticky_piston",
+      "id": 29,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:black_wool",
+      "id": -554,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:brown_shulker_box",
+      "id": -624,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_oxidized_copper_grate",
+      "id": -775,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_leggings",
+      "id": 776,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:tnt",
+      "id": 46,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:double_stone_block_slab4",
+      "id": 792,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_boots",
+      "id": 777,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:prismarine_brick_double_slab",
+      "id": -914,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:nether_brick_stairs",
       "id": 114,
       "version": 2,
@@ -6289,30 +6439,6 @@
       "component_based": false
     },
     {
-      "name": "minecraft:spruce_standing_sign",
-      "id": -181,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:sticky_piston",
-      "id": 29,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:black_wool",
-      "id": -554,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:brown_shulker_box",
-      "id": -624,
-      "version": 2,
-      "component_based": false
-    },
-    {
       "name": "minecraft:dark_prismarine_stairs",
       "id": -3,
       "version": 2,
@@ -6337,14 +6463,14 @@
       "component_based": false
     },
     {
-      "name": "minecraft:light_blue_carpet",
-      "id": -599,
+      "name": "minecraft:hard_black_stained_glass",
+      "id": -702,
       "version": 2,
       "component_based": false
     },
     {
-      "name": "minecraft:hard_black_stained_glass",
-      "id": -702,
+      "name": "minecraft:light_blue_carpet",
+      "id": -599,
       "version": 2,
       "component_based": false
     },
@@ -6380,19 +6506,13 @@
     },
     {
       "name": "minecraft:log",
-      "id": 770,
+      "id": 781,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:birch_fence",
       "id": -576,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:hard_orange_stained_glass_pane",
-      "id": -658,
       "version": 2,
       "component_based": false
     },
@@ -6422,7 +6542,7 @@
     },
     {
       "name": "minecraft:fence",
-      "id": 771,
+      "id": 782,
       "version": 2,
       "component_based": false
     },
@@ -6464,7 +6584,7 @@
     },
     {
       "name": "minecraft:stonebrick",
-      "id": 772,
+      "id": 783,
       "version": 2,
       "component_based": false
     },
@@ -6524,7 +6644,7 @@
     },
     {
       "name": "minecraft:coral_block",
-      "id": 773,
+      "id": 784,
       "version": 2,
       "component_based": false
     },
@@ -6541,18 +6661,6 @@
       "component_based": false
     },
     {
-      "name": "minecraft:brick_slab",
-      "id": -874,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:dead_horn_coral_fan",
-      "id": -847,
-      "version": 2,
-      "component_based": false
-    },
-    {
       "name": "minecraft:nether_brick_slab",
       "id": -877,
       "version": 2,
@@ -6560,13 +6668,13 @@
     },
     {
       "name": "minecraft:stone_block_slab",
-      "id": 774,
+      "id": 785,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:leaves",
-      "id": 785,
+      "id": 796,
       "version": 2,
       "component_based": false
     },
@@ -6596,13 +6704,13 @@
     },
     {
       "name": "minecraft:stone_block_slab2",
-      "id": 775,
+      "id": 786,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:leaves2",
-      "id": 786,
+      "id": 797,
       "version": 2,
       "component_based": false
     },
@@ -6686,7 +6794,7 @@
     },
     {
       "name": "minecraft:stone_block_slab3",
-      "id": 776,
+      "id": 787,
       "version": 2,
       "component_based": false
     },
@@ -6735,12 +6843,6 @@
     {
       "name": "minecraft:prismarine_double_slab",
       "id": -912,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:prismarine_brick_double_slab",
-      "id": -914,
       "version": 2,
       "component_based": false
     },
@@ -6847,24 +6949,6 @@
       "component_based": false
     },
     {
-      "name": "minecraft:waxed_oxidized_copper_grate",
-      "id": -775,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:tnt",
-      "id": 46,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:double_stone_block_slab4",
-      "id": 781,
-      "version": 2,
-      "component_based": false
-    },
-    {
       "name": "minecraft:sweet_berry_bush",
       "id": -207,
       "version": 2,
@@ -6908,7 +6992,7 @@
     },
     {
       "name": "minecraft:coral_fan",
-      "id": 782,
+      "id": 793,
       "version": 2,
       "component_based": false
     },
@@ -6956,7 +7040,7 @@
     },
     {
       "name": "minecraft:sapling",
-      "id": 784,
+      "id": 795,
       "version": 2,
       "component_based": false
     },
@@ -7106,13 +7190,7 @@
     },
     {
       "name": "minecraft:red_flower",
-      "id": 788,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:hard_pink_stained_glass_pane",
-      "id": -663,
+      "id": 799,
       "version": 2,
       "component_based": false
     },
@@ -7286,7 +7364,7 @@
     },
     {
       "name": "minecraft:tallgrass",
-      "id": 792,
+      "id": 803,
       "version": 2,
       "component_based": false
     },
@@ -7316,7 +7394,7 @@
     },
     {
       "name": "minecraft:log2",
-      "id": 793,
+      "id": 804,
       "version": 2,
       "component_based": false
     },
@@ -7460,7 +7538,7 @@
     },
     {
       "name": "minecraft:music_disc_lava_chicken",
-      "id": 805,
+      "id": 816,
       "version": 2,
       "component_based": true
     },
@@ -7514,7 +7592,7 @@
     },
     {
       "name": "minecraft:concrete_powder",
-      "id": 796,
+      "id": 807,
       "version": 2,
       "component_based": false
     },
@@ -7562,7 +7640,7 @@
     },
     {
       "name": "minecraft:wood",
-      "id": 800,
+      "id": 811,
       "version": 2,
       "component_based": false
     },
@@ -7640,7 +7718,7 @@
     },
     {
       "name": "minecraft:light_block",
-      "id": 811,
+      "id": 822,
       "version": 2,
       "component_based": false
     },
@@ -7652,7 +7730,7 @@
     },
     {
       "name": "minecraft:end_crystal",
-      "id": 816,
+      "id": 827,
       "version": 2,
       "component_based": false
     },
@@ -7832,19 +7910,19 @@
     },
     {
       "name": "minecraft:music_disc_creator",
-      "id": 801,
+      "id": 812,
       "version": 2,
       "component_based": true
     },
     {
       "name": "minecraft:music_disc_precipice",
-      "id": 803,
+      "id": 814,
       "version": 2,
       "component_based": true
     },
     {
       "name": "minecraft:music_disc_tears",
-      "id": 804,
+      "id": 815,
       "version": 2,
       "component_based": true
     },
@@ -7903,12 +7981,6 @@
       "component_based": false
     },
     {
-      "name": "minecraft:hard_gray_stained_glass",
-      "id": -694,
-      "version": 2,
-      "component_based": false
-    },
-    {
       "name": "minecraft:hard_light_gray_stained_glass",
       "id": -695,
       "version": 2,
@@ -7928,13 +8000,43 @@
     },
     {
       "name": "minecraft:hard_stained_glass",
-      "id": 807,
+      "id": 818,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:hard_white_stained_glass_pane",
+      "id": 191,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:hard_orange_stained_glass_pane",
+      "id": -658,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:hard_magenta_stained_glass_pane",
+      "id": -659,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:hard_light_blue_stained_glass_pane",
+      "id": -660,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:hard_yellow_stained_glass_pane",
       "id": -661,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:hard_pink_stained_glass_pane",
+      "id": -663,
       "version": 2,
       "component_based": false
     },
@@ -7976,7 +8078,7 @@
     },
     {
       "name": "minecraft:hard_stained_glass_pane",
-      "id": 808,
+      "id": 819,
       "version": 2,
       "component_based": false
     },
@@ -8007,12 +8109,6 @@
     {
       "name": "minecraft:light_block_1",
       "id": -929,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:light_block_2",
-      "id": -930,
       "version": 2,
       "component_based": false
     },
@@ -8774,25 +8870,25 @@
     },
     {
       "name": "minecraft:dye",
-      "id": 813,
+      "id": 824,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:banner_pattern",
-      "id": 814,
+      "id": 825,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:spawn_egg",
-      "id": 815,
+      "id": 826,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:glow_berries",
-      "id": 817,
+      "id": 828,
       "version": 0,
       "component_based": false
     },
@@ -8805,6 +8901,12 @@
     {
       "name": "minecraft:nether_gold_ore",
       "id": -288,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_weathered_copper_chest",
+      "id": -1037,
       "version": 2,
       "component_based": false
     },
@@ -9367,18 +9469,6 @@
       "component_based": false
     },
     {
-      "name": "minecraft:cave_vines_body_with_berries",
-      "id": -375,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:sandstone_stairs",
-      "id": 128,
-      "version": 2,
-      "component_based": false
-    },
-    {
       "name": "minecraft:polished_blackstone_brick_stairs",
       "id": -275,
       "version": 2,
@@ -9471,6 +9561,12 @@
     {
       "name": "minecraft:weathered_copper_grate",
       "id": -770,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_chest",
+      "id": -1031,
       "version": 2,
       "component_based": false
     },
@@ -9577,6 +9673,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_oxidized_copper_chest",
+      "id": -1038,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:bamboo_mosaic_double_slab",
       "id": -525,
       "version": 2,
@@ -9645,6 +9747,12 @@
     {
       "name": "minecraft:redstone_ore",
       "id": 73,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_copper_chest",
+      "id": -1035,
       "version": 2,
       "component_based": false
     },
@@ -9955,12 +10063,6 @@
       "component_based": false
     },
     {
-      "name": "minecraft:shroomlight",
-      "id": -230,
-      "version": 2,
-      "component_based": false
-    },
-    {
       "name": "minecraft:dark_oak_stairs",
       "id": 164,
       "version": 2,
@@ -10069,6 +10171,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:exposed_copper_chest",
+      "id": -1032,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:waxed_double_cut_copper_slab",
       "id": -372,
       "version": 2,
@@ -10119,6 +10227,12 @@
     {
       "name": "minecraft:acacia_trapdoor",
       "id": -145,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:weathered_copper_chest",
+      "id": -1033,
       "version": 2,
       "component_based": false
     },
@@ -10477,6 +10591,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:oxidized_copper_chest",
+      "id": -1034,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:polished_blackstone_wall",
       "id": -297,
       "version": 2,
@@ -10701,12 +10821,6 @@
     {
       "name": "minecraft:netherreactor",
       "id": 247,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:trip_wire",
-      "id": 132,
       "version": 2,
       "component_based": false
     },
