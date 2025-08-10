@@ -1,53 +1,62 @@
-package com.luminiadev.lumi.codegen;
+package com.luminiadev.lumi.codegen.generator;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.luminiadev.lumi.codegen.data.GenericDataUtil;
+import com.luminiadev.lumi.codegen.data.KaoootDataUtil;
 import com.palantir.javapoet.*;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 
 import javax.lang.model.element.Modifier;
-import java.io.InputStreamReader;
-import java.lang.reflect.Type;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ItemTypeGen {
-
-    private static final Gson GSON = new Gson();
-    private static final ClassName ITEM_TYPE_CLASS = ClassName.get("cn.nukkit.item.material", "ItemType");
+public class BlockTypeGen {
+    private static final ClassName BLOCK_TYPE_CLASS = ClassName.get("cn.nukkit.block.material", "BlockType");
 
     @SneakyThrows
     public static void generate() {
-        List<ItemEntry> itemEntries = prepareItemEntries();
+        List<BlockEntry> blockEntries = prepareBlockEntries();
 
-        TypeSpec itemTypesClass = TypeSpec.classBuilder("ItemTypes")
+        TypeSpec blockTypesClass = TypeSpec.classBuilder("BlockTypes")
                 .addJavadoc("This class is generated automatically, do not change it manually.")
                 .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
                 .addFields(createMapFields())
-                .addFields(createItemConstants(itemEntries))
+                .addFields(createBlockConstants(blockEntries))
                 .addMethods(createUtilityMethods())
-                .addType(createItemTypeImpl())
+                .addType(createBlockTypeImpl())
                 .build();
 
-        JavaFile javaFile = JavaFile.builder("cn.nukkit.item.material", itemTypesClass)
+        JavaFile javaFile = JavaFile.builder("cn.nukkit.block.material", blockTypesClass)
                 .indent("    ")
                 .skipJavaLangImports(true)
                 .build();
         javaFile.writeTo(Path.of("generated/"));
     }
 
-    private static List<ItemEntry> prepareItemEntries() {
-        Map<String, Integer> cbLegacyItemIds = getLegacyItemIds("data/cloudburst/legacy_item_ids.json");
+    private static List<BlockEntry> prepareBlockEntries() {
+        Map<String, Integer> itemPalette = KaoootDataUtil.getItemPalette();
+        Map<String, Integer> legacyBlockIds = GenericDataUtil.getLegacyItemIds("data/cloudburst/legacy_block_ids.json");
+        Map<String, Integer> internalItemIds = GenericDataUtil.getLegacyItemIds("data/internal/legacy_item_ids.json");
 
-        List<ItemEntry> itemEntries = cbLegacyItemIds.entrySet().stream()
-                .map(entry -> new ItemEntry(entry.getKey(), entry.getValue()))
-                .sorted()
+        List<BlockEntry> blockEntries = itemPalette.entrySet().stream()
+                .filter(entry -> legacyBlockIds.containsKey(entry.getKey()) || internalItemIds.containsKey(entry.getKey()))
+                .map(entry -> new BlockEntry(entry.getKey(), entry.getValue(), entry.getKey().startsWith("minecraft:item.")))
                 .collect(Collectors.toList());
 
-        return itemEntries;
+        Set<String> itemIds = blockEntries.stream()
+                .filter(BlockEntry::item)
+                .map(entry -> entry.identifier.replaceFirst("^minecraft:item\\.", "minecraft:"))
+                .collect(Collectors.toSet());
+
+        blockEntries.removeIf(entry -> !entry.item && itemIds.contains(entry.identifier));
+        blockEntries.sort(Comparator.naturalOrder());
+
+        return blockEntries;
     }
 
     private static List<FieldSpec> createMapFields() {
@@ -55,7 +64,7 @@ public class ItemTypeGen {
                 FieldSpec.builder(
                                 ParameterizedTypeName.get(
                                         ClassName.get("it.unimi.dsi.fastutil.ints", "Int2ObjectMap"),
-                                        ITEM_TYPE_CLASS
+                                        BLOCK_TYPE_CLASS
                                 ),
                                 "RUNTIME_TO_TYPE",
                                 Modifier.PRIVATE, Modifier.STATIC, Modifier.FINAL)
@@ -65,7 +74,7 @@ public class ItemTypeGen {
                                 ParameterizedTypeName.get(
                                         ClassName.get("it.unimi.dsi.fastutil.objects", "Object2ObjectMap"),
                                         ClassName.get(String.class),
-                                        ITEM_TYPE_CLASS
+                                        BLOCK_TYPE_CLASS
                                 ),
                                 "ID_TO_TYPE",
                                 Modifier.PRIVATE, Modifier.STATIC, Modifier.FINAL)
@@ -74,13 +83,14 @@ public class ItemTypeGen {
         );
     }
 
-    private static List<FieldSpec> createItemConstants(List<ItemEntry> itemEntries) {
-        return itemEntries.stream()
+    private static List<FieldSpec> createBlockConstants(List<BlockEntry> blockEntries) {
+        return blockEntries.stream()
                 .map(entry -> {
-                    String name = entry.identifier.split(":")[1].toUpperCase();
+                    String blockName = entry.identifier.split(":")[1].toUpperCase();
+                    String finalName = entry.item ? blockName.replace("ITEM.", "") : blockName;
                     return FieldSpec.builder(
-                                    ITEM_TYPE_CLASS,
-                                    name,
+                                    BLOCK_TYPE_CLASS,
+                                    finalName,
                                     Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
                             .initializer("register($S, $L)", entry.identifier, entry.runtimeId)
                             .build();
@@ -92,61 +102,50 @@ public class ItemTypeGen {
         return List.of(
                 MethodSpec.methodBuilder("register")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
-                        .returns(ITEM_TYPE_CLASS)
+                        .returns(BLOCK_TYPE_CLASS)
                         .addParameter(String.class, "identifier")
                         .addParameter(TypeName.INT, "runtimeId")
-                        .addStatement("return register(new ItemTypeImpl(identifier, runtimeId))")
+                        .addStatement("return register(new BlockTypeImpl(identifier, runtimeId))")
                         .build(),
                 MethodSpec.methodBuilder("register")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
-                        .returns(ITEM_TYPE_CLASS)
-                        .addParameter(ITEM_TYPE_CLASS, "itemType")
-                        .addStatement("ItemType oldType = ID_TO_TYPE.get(itemType.getIdentifier())")
-                        .addStatement("RUNTIME_TO_TYPE.putIfAbsent(itemType.getRuntimeId(), itemType)")
-                        .addStatement("ID_TO_TYPE.putIfAbsent(itemType.getIdentifier(), itemType)")
-                        .addStatement("return oldType != null ? oldType : itemType")
+                        .returns(BLOCK_TYPE_CLASS)
+                        .addParameter(BLOCK_TYPE_CLASS, "blockType")
+                        .addStatement("BlockType oldType = ID_TO_TYPE.get(blockType.getIdentifier())")
+                        .addStatement("RUNTIME_TO_TYPE.putIfAbsent(blockType.getRuntimeId(), blockType)")
+                        .addStatement("ID_TO_TYPE.putIfAbsent(blockType.getIdentifier(), blockType)")
+                        .addStatement("$T.register(blockType.getIdentifier(), blockType.getRuntimeId())",
+                                ClassName.get("cn.nukkit.item.material", "ItemTypes"))
+                        .addStatement("return oldType != null ? oldType : blockType")
                         .build(),
                 MethodSpec.methodBuilder("get")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
-                        .returns(ITEM_TYPE_CLASS)
+                        .returns(BLOCK_TYPE_CLASS)
                         .addParameter(String.class, "identifier")
                         .addStatement("return ID_TO_TYPE.get(identifier)")
                         .build(),
                 MethodSpec.methodBuilder("getFromRuntime")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
-                        .returns(ITEM_TYPE_CLASS)
+                        .returns(BLOCK_TYPE_CLASS)
                         .addParameter(TypeName.INT, "runtimeId")
                         .addStatement("return RUNTIME_TO_TYPE.get(runtimeId)")
                         .build()
         );
     }
 
-    private static TypeSpec createItemTypeImpl() {
-        return TypeSpec.classBuilder("ItemTypeImpl")
+    private static TypeSpec createBlockTypeImpl() {
+        return TypeSpec.classBuilder("BlockTypeImpl")
                 .addModifiers(Modifier.PRIVATE, Modifier.STATIC)
-                .addSuperinterface(ITEM_TYPE_CLASS)
+                .addSuperinterface(BLOCK_TYPE_CLASS)
                 .addAnnotation(Data.class)
                 .addField(FieldSpec.builder(String.class, "identifier", Modifier.PRIVATE, Modifier.FINAL).build())
                 .addField(FieldSpec.builder(TypeName.INT, "runtimeId", Modifier.PRIVATE, Modifier.FINAL).build())
                 .build();
     }
 
-    @SneakyThrows
-    private static Map<String, Integer> getLegacyItemIds(String path) {
-        var inputStream = ItemTypeGen.class.getClassLoader().getResourceAsStream(path);
-        if (inputStream != null) {
-            try (var reader = new InputStreamReader(inputStream)) {
-                Type type = new TypeToken<Map<String, Integer>>() {
-                }.getType();
-                return GSON.fromJson(reader, type);
-            }
-        }
-        return new HashMap<>();
-    }
-
-    private record ItemEntry(String identifier, int runtimeId) implements Comparable<ItemEntry> {
+    private record BlockEntry(String identifier, int runtimeId, boolean item) implements Comparable<BlockEntry> {
         @Override
-        public int compareTo(@NonNull ItemEntry entry) {
+        public int compareTo(@NonNull BlockEntry entry) {
             return this.identifier.compareTo(entry.identifier);
         }
     }

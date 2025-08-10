@@ -1,7 +1,6 @@
-package com.luminiadev.lumi.codegen;
+package com.luminiadev.lumi.codegen.generator;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonParser;
+import com.luminiadev.lumi.codegen.data.GenericDataUtil;
 import com.palantir.javapoet.FieldSpec;
 import com.palantir.javapoet.JavaFile;
 import com.palantir.javapoet.MethodSpec;
@@ -9,19 +8,18 @@ import com.palantir.javapoet.TypeSpec;
 import lombok.SneakyThrows;
 
 import javax.lang.model.element.Modifier;
-import java.io.InputStreamReader;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class SoundEnumGen {
-
-    private static final Gson GSON = new Gson();
 
     @SneakyThrows
     public static void generate() {
         List<String> sounds = new ArrayList<>();
-        sounds.addAll(getSoundNames());
-        sounds.addAll(getMusicNames());
+        sounds.addAll(GenericDataUtil.getSoundNames());
+        sounds.addAll(GenericDataUtil.getMusicNames());
         sounds.sort(Comparator.naturalOrder());
 
         TypeSpec.Builder builder = TypeSpec.enumBuilder("Sound")
@@ -48,35 +46,5 @@ public class SoundEnumGen {
                 .skipJavaLangImports(true)
                 .build();
         javaFile.writeTo(Path.of("generated/"));
-    }
-
-    @SneakyThrows
-    private static Set<String> getSoundNames() {
-        var inputStream = SoundEnumGen.class.getClassLoader().getResourceAsStream("data/pack/sound_definitions.json");
-        if (inputStream != null) {
-            try (var reader = new InputStreamReader(inputStream)) {
-                return JsonParser.parseReader(reader)
-                        .getAsJsonObject()
-                        .getAsJsonObject("sound_definitions")
-                        .asMap()
-                        .keySet();
-            }
-        }
-        return new HashSet<>();
-    }
-
-    @SneakyThrows
-    private static Set<String> getMusicNames() {
-        var inputStream = SoundEnumGen.class.getClassLoader().getResourceAsStream("data/pack/music_definitions.json");
-        if (inputStream != null) {
-            try (var reader = new InputStreamReader(inputStream)) {
-                var musicNames = new HashSet<String>();
-                JsonParser.parseReader(reader).getAsJsonObject().asMap().values().forEach(v -> {
-                    musicNames.add(v.getAsJsonObject().get("event_name").getAsString());
-                });
-                return musicNames;
-            }
-        }
-        return new HashSet<>();
     }
 }

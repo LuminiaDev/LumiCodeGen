@@ -1,19 +1,17 @@
-package com.luminiadev.lumi.codegen;
+package com.luminiadev.lumi.codegen.generator;
 
-import com.google.common.reflect.TypeToken;
-import com.google.gson.Gson;
+import com.luminiadev.lumi.codegen.data.KaoootDataUtil;
 import com.palantir.javapoet.*;
 import lombok.SneakyThrows;
 
 import javax.lang.model.element.Modifier;
-import java.io.InputStreamReader;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class BlockTagsGen {
-
-    private static final Gson GSON = new Gson();
     private static final ClassName BLOCK_TAG_CLASS = ClassName.get("cn.nukkit.block.material.tags", "BlockTag");
     private static final ClassName LAZY_BLOCK_TAG_CLASS = ClassName.get("cn.nukkit.block.material.tags.impl", "LazyBlockTag");
 
@@ -37,7 +35,7 @@ public class BlockTagsGen {
     }
 
     private static List<String> prepareBlockTags() {
-        Map<String, Set<String>> vanillaBlockTags = getVanillaBlockTags();
+        Map<String, Set<String>> vanillaBlockTags = KaoootDataUtil.getVanillaBlockTags();
         return vanillaBlockTags.keySet().stream()
                 .sorted()
                 .collect(Collectors.toList());
@@ -118,18 +116,5 @@ public class BlockTagsGen {
                         .addStatement("return NAME_2_TAG.get(tagName)")
                         .build()
         );
-    }
-
-    @SneakyThrows
-    private static Map<String, Set<String>> getVanillaBlockTags() {
-        var inputStream = BlockTagsGen.class.getClassLoader().getResourceAsStream("data/kaooot/block_tags.json");
-        if (inputStream != null) {
-            try (var reader = new InputStreamReader(inputStream)) {
-                var type = new TypeToken<Map<String, Set<String>>>() {
-                }.getType();
-                return GSON.fromJson(reader, type);
-            }
-        }
-        return new HashMap<>();
     }
 }

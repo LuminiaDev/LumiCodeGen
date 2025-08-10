@@ -1,19 +1,17 @@
-package com.luminiadev.lumi.codegen;
+package com.luminiadev.lumi.codegen.generator;
 
-import com.google.common.reflect.TypeToken;
-import com.google.gson.Gson;
+import com.luminiadev.lumi.codegen.data.KaoootDataUtil;
 import com.palantir.javapoet.*;
 import lombok.SneakyThrows;
 
 import javax.lang.model.element.Modifier;
-import java.io.InputStreamReader;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ItemTagsGen {
-
-    private static final Gson GSON = new Gson();
     private static final ClassName ITEM_TAG_CLASS = ClassName.get("cn.nukkit.item.material.tags", "ItemTag");
     private static final ClassName LAZY_ITEM_TAG_CLASS = ClassName.get("cn.nukkit.item.material.tags.impl", "LazyItemTag");
 
@@ -37,7 +35,7 @@ public class ItemTagsGen {
     }
 
     private static List<String> prepareItemTags() {
-        Map<String, Set<String>> vanillaItemTags = getVanillaItemTags();
+        Map<String, Set<String>> vanillaItemTags = KaoootDataUtil.getVanillaItemTags();
         return vanillaItemTags.keySet().stream()
                 .sorted()
                 .collect(Collectors.toList());
@@ -118,18 +116,5 @@ public class ItemTagsGen {
                         .addStatement("return NAME_2_TAG.get(tagName)")
                         .build()
         );
-    }
-
-    @SneakyThrows
-    private static Map<String, Set<String>> getVanillaItemTags() {
-        var inputStream = ItemTagsGen.class.getClassLoader().getResourceAsStream("data/kaooot/item_tags.json");
-        if (inputStream != null) {
-            try (var reader = new InputStreamReader(inputStream)) {
-                var type = new TypeToken<Map<String, Set<String>>>() {
-                }.getType();
-                return GSON.fromJson(reader, type);
-            }
-        }
-        return new HashMap<>();
     }
 }
