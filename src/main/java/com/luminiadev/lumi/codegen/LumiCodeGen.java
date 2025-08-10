@@ -6,6 +6,7 @@ public class LumiCodeGen {
         SoundEnumGen.generate();
         ItemTypeGen.generate();
         ItemTagsGen.generate();
+        ItemNamespaceIdGen.generate();
         BlockTypeGen.generate();
         BlockTagsGen.generate();
     }
