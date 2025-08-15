@@ -92,7 +92,7 @@ public class BlockTypeGen {
                                     BLOCK_TYPE_CLASS,
                                     finalName,
                                     Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
-                            .initializer("register($S, $L)", entry.identifier, entry.runtimeId)
+                            .initializer("register($S, $L)", entry.identifier.replace("item.", ""), entry.runtimeId)
                             .build();
                 })
                 .collect(Collectors.toList());
