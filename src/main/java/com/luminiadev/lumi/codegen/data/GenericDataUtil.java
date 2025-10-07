@@ -61,7 +61,9 @@ public class GenericDataUtil {
                     JsonObject obj = element.getAsJsonObject();
                     String name = obj.get("name").getAsString();
                     int id = obj.get("id").getAsInt();
-                    result.put(name, id);
+                    if(!name.startsWith("minecraft:item.")) {
+                        result.put(name, id);
+                    }
                 }
 
                 return result;
