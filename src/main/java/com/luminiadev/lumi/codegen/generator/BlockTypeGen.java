@@ -40,7 +40,7 @@ public class BlockTypeGen {
 
     private static List<BlockEntry> prepareBlockEntries() {
         Map<String, Integer> itemPalette = KaoootDataUtil.getItemPalette();
-        Map<String, Integer> legacyBlockIds = GenericDataUtil.getLegacyItemIds("data/cloudburst/legacy_block_ids.json");
+        Map<String, Integer> legacyBlockIds = GenericDataUtil.getLegacyBlockIds("data/cloudburst/vanilla_palette.nbt");
         Map<String, Integer> internalItemIds = GenericDataUtil.getLegacyItemIds("data/internal/legacy_item_ids.json");
 
         List<BlockEntry> blockEntries = itemPalette.entrySet().stream()

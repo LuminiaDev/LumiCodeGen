@@ -36,7 +36,7 @@ public class ItemTypeGen {
     }
 
     private static List<ItemEntry> prepareItemEntries() {
-        Map<String, Integer> cbLegacyItemIds = GenericDataUtil.getLegacyItemIds("data/cloudburst/legacy_item_ids.json");
+        Map<String, Integer> cbLegacyItemIds = GenericDataUtil.getRuntimeItemIds("data/cloudburst/runtime_item_states.json");
 
         List<ItemEntry> itemEntries = cbLegacyItemIds.entrySet().stream()
                 .map(entry -> new ItemEntry(entry.getKey(), entry.getValue()))

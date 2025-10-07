@@ -158,7 +158,7 @@
     },
     {
       "name": "minecraft:skull_pottery_sherd",
-      "id": 714,
+      "id": 713,
       "version": 2,
       "component_based": false
     },
@@ -392,7 +392,7 @@
     },
     {
       "name": "minecraft:coast_armor_trim_smithing_template",
-      "id": 720,
+      "id": 719,
       "version": 2,
       "component_based": false
     },
@@ -548,7 +548,7 @@
     },
     {
       "name": "minecraft:mourner_pottery_sherd",
-      "id": 708,
+      "id": 707,
       "version": 2,
       "component_based": false
     },
@@ -608,7 +608,7 @@
     },
     {
       "name": "minecraft:vex_armor_trim_smithing_template",
-      "id": 724,
+      "id": 723,
       "version": 2,
       "component_based": false
     },
@@ -632,7 +632,7 @@
     },
     {
       "name": "minecraft:pale_oak_chest_boat",
-      "id": 745,
+      "id": 744,
       "version": 2,
       "component_based": false
     },
@@ -698,7 +698,7 @@
     },
     {
       "name": "minecraft:green_harness",
-      "id": 757,
+      "id": 756,
       "version": 2,
       "component_based": false
     },
@@ -728,7 +728,7 @@
     },
     {
       "name": "minecraft:resin_brick",
-      "id": 748,
+      "id": 747,
       "version": 2,
       "component_based": false
     },
@@ -752,7 +752,7 @@
     },
     {
       "name": "minecraft:copper_sword",
-      "id": 769,
+      "id": 768,
       "version": 2,
       "component_based": false
     },
@@ -776,7 +776,7 @@
     },
     {
       "name": "minecraft:bamboo_sign",
-      "id": 689,
+      "id": 688,
       "version": 2,
       "component_based": false
     },
@@ -812,7 +812,7 @@
     },
     {
       "name": "minecraft:angler_pottery_sherd",
-      "id": 693,
+      "id": 692,
       "version": 2,
       "component_based": false
     },
@@ -824,7 +824,7 @@
     },
     {
       "name": "minecraft:cherry_chest_boat",
-      "id": 687,
+      "id": 686,
       "version": 2,
       "component_based": false
     },
@@ -914,7 +914,7 @@
     },
     {
       "name": "minecraft:wild_armor_trim_smithing_template",
-      "id": 721,
+      "id": 720,
       "version": 2,
       "component_based": false
     },
@@ -1166,7 +1166,7 @@
     },
     {
       "name": "minecraft:prize_pottery_sherd",
-      "id": 710,
+      "id": 709,
       "version": 2,
       "component_based": false
     },
@@ -1243,6 +1243,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:acacia_shelf",
+      "id": -1051,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:nether_wart",
       "id": 316,
       "version": 0,
@@ -1292,7 +1298,7 @@
     },
     {
       "name": "minecraft:happy_ghast_spawn_egg",
-      "id": 751,
+      "id": 750,
       "version": 2,
       "component_based": false
     },
@@ -1351,6 +1357,12 @@
       "component_based": true
     },
     {
+      "name": "minecraft:copper_golem_statue",
+      "id": -1039,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:charcoal",
       "id": 327,
       "version": 2,
@@ -1370,7 +1382,7 @@
     },
     {
       "name": "minecraft:oak_chest_boat",
-      "id": 675,
+      "id": 674,
       "version": 2,
       "component_based": false
     },
@@ -1479,6 +1491,12 @@
     {
       "name": "minecraft:raw_gold",
       "id": 540,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_exposed_copper_lantern",
+      "id": -1088,
       "version": 2,
       "component_based": false
     },
@@ -1634,7 +1652,7 @@
     },
     {
       "name": "minecraft:mangrove_boat",
-      "id": 672,
+      "id": 671,
       "version": 2,
       "component_based": false
     },
@@ -1646,7 +1664,7 @@
     },
     {
       "name": "minecraft:spyglass",
-      "id": 662,
+      "id": 661,
       "version": 2,
       "component_based": false
     },
@@ -1670,7 +1688,7 @@
     },
     {
       "name": "minecraft:flow_armor_trim_smithing_template",
-      "id": 734,
+      "id": 733,
       "version": 2,
       "component_based": false
     },
@@ -1694,7 +1712,7 @@
     },
     {
       "name": "minecraft:arms_up_pottery_sherd",
-      "id": 695,
+      "id": 694,
       "version": 2,
       "component_based": false
     },
@@ -1892,7 +1910,7 @@
     },
     {
       "name": "minecraft:cherry_sign",
-      "id": 688,
+      "id": 687,
       "version": 2,
       "component_based": false
     },
@@ -1916,13 +1934,13 @@
     },
     {
       "name": "minecraft:glow_frame",
-      "id": 660,
+      "id": 659,
       "version": 2,
       "component_based": true
     },
     {
       "name": "minecraft:silence_armor_trim_smithing_template",
-      "id": 729,
+      "id": 728,
       "version": 2,
       "component_based": false
     },
@@ -2030,7 +2048,7 @@
     },
     {
       "name": "minecraft:burn_pottery_sherd",
-      "id": 698,
+      "id": 697,
       "version": 2,
       "component_based": false
     },
@@ -2048,7 +2066,7 @@
     },
     {
       "name": "minecraft:music_disc_pigstep",
-      "id": 657,
+      "id": 656,
       "version": 2,
       "component_based": true
     },
@@ -2240,7 +2258,7 @@
     },
     {
       "name": "minecraft:tadpole_bucket",
-      "id": 667,
+      "id": 666,
       "version": 2,
       "component_based": false
     },
@@ -2325,6 +2343,12 @@
     {
       "name": "minecraft:crimson_pressure_plate",
       "id": -262,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:oxidized_copper_chain",
+      "id": -1077,
       "version": 2,
       "component_based": false
     },
@@ -2485,6 +2509,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_weathered_copper_bars",
+      "id": -1072,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:dead_fire_coral_wall_fan",
       "id": -909,
       "version": 2,
@@ -2594,7 +2624,7 @@
     },
     {
       "name": "minecraft:snort_pottery_sherd",
-      "id": 715,
+      "id": 714,
       "version": 2,
       "component_based": false
     },
@@ -2654,7 +2684,7 @@
     },
     {
       "name": "minecraft:netherite_upgrade_smithing_template",
-      "id": 717,
+      "id": 716,
       "version": 2,
       "component_based": false
     },
@@ -2702,7 +2732,7 @@
     },
     {
       "name": "minecraft:heartbreak_pottery_sherd",
-      "id": 705,
+      "id": 704,
       "version": 2,
       "component_based": false
     },
@@ -2714,7 +2744,7 @@
     },
     {
       "name": "minecraft:tadpole_spawn_egg",
-      "id": 666,
+      "id": 665,
       "version": 2,
       "component_based": false
     },
@@ -2834,7 +2864,7 @@
     },
     {
       "name": "minecraft:miner_pottery_sherd",
-      "id": 707,
+      "id": 706,
       "version": 2,
       "component_based": false
     },
@@ -2935,8 +2965,14 @@
       "component_based": false
     },
     {
+      "name": "minecraft:exposed_copper_bars",
+      "id": -1067,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:snout_armor_trim_smithing_template",
-      "id": 726,
+      "id": 725,
       "version": 2,
       "component_based": false
     },
@@ -3086,7 +3122,7 @@
     },
     {
       "name": "minecraft:mangrove_door",
-      "id": 670,
+      "id": 669,
       "version": 2,
       "component_based": false
     },
@@ -3146,7 +3182,7 @@
     },
     {
       "name": "minecraft:camel_spawn_egg",
-      "id": 692,
+      "id": 691,
       "version": 2,
       "component_based": false
     },
@@ -3158,7 +3194,7 @@
     },
     {
       "name": "minecraft:dune_armor_trim_smithing_template",
-      "id": 719,
+      "id": 718,
       "version": 2,
       "component_based": false
     },
@@ -3476,7 +3512,7 @@
     },
     {
       "name": "minecraft:rib_armor_trim_smithing_template",
-      "id": 727,
+      "id": 726,
       "version": 2,
       "component_based": false
     },
@@ -3559,16 +3595,16 @@
       "component_based": false
     },
     {
+      "name": "minecraft:warped_fungus_on_a_stick",
+      "id": 655,
+      "version": 2,
+      "component_based": true
+    },
+    {
       "name": "minecraft:chiseled_nether_bricks",
       "id": -302,
       "version": 2,
       "component_based": false
-    },
-    {
-      "name": "minecraft:chain",
-      "id": 656,
-      "version": 2,
-      "component_based": true
     },
     {
       "name": "minecraft:magma_cube_spawn_egg",
@@ -3589,14 +3625,8 @@
       "component_based": false
     },
     {
-      "name": "minecraft:warped_fungus_on_a_stick",
-      "id": 655,
-      "version": 2,
-      "component_based": true
-    },
-    {
       "name": "minecraft:soul_campfire",
-      "id": 659,
+      "id": 658,
       "version": 2,
       "component_based": true
     },
@@ -3674,7 +3704,7 @@
     },
     {
       "name": "minecraft:brewer_pottery_sherd",
-      "id": 697,
+      "id": 696,
       "version": 2,
       "component_based": false
     },
@@ -3692,7 +3722,7 @@
     },
     {
       "name": "minecraft:creaking_spawn_egg",
-      "id": 747,
+      "id": 746,
       "version": 2,
       "component_based": false
     },
@@ -3848,7 +3878,7 @@
     },
     {
       "name": "minecraft:warden_spawn_egg",
-      "id": 669,
+      "id": 668,
       "version": 2,
       "component_based": false
     },
@@ -3896,7 +3926,7 @@
     },
     {
       "name": "minecraft:host_armor_trim_smithing_template",
-      "id": 733,
+      "id": 732,
       "version": 2,
       "component_based": false
     },
@@ -4058,7 +4088,7 @@
     },
     {
       "name": "minecraft:plenty_pottery_sherd",
-      "id": 709,
+      "id": 708,
       "version": 2,
       "component_based": false
     },
@@ -4118,7 +4148,7 @@
     },
     {
       "name": "minecraft:magenta_harness",
-      "id": 761,
+      "id": 760,
       "version": 2,
       "component_based": false
     },
@@ -4303,6 +4333,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:copper_torch",
+      "id": -1082,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:deepslate_brick_double_slab",
       "id": -399,
       "version": 2,
@@ -4317,6 +4353,12 @@
     {
       "name": "minecraft:dark_prismarine_double_slab",
       "id": -913,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_chain",
+      "id": -1074,
       "version": 2,
       "component_based": false
     },
@@ -4442,7 +4484,7 @@
     },
     {
       "name": "minecraft:light_gray_harness",
-      "id": 759,
+      "id": 758,
       "version": 2,
       "component_based": false
     },
@@ -4526,7 +4568,7 @@
     },
     {
       "name": "minecraft:brush",
-      "id": 716,
+      "id": 715,
       "version": 2,
       "component_based": false
     },
@@ -4562,7 +4604,7 @@
     },
     {
       "name": "minecraft:yellow_harness",
-      "id": 767,
+      "id": 766,
       "version": 2,
       "component_based": false
     },
@@ -4699,8 +4741,14 @@
       "component_based": false
     },
     {
+      "name": "minecraft:cherry_shelf",
+      "id": -1054,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:copper_axe",
-      "id": 772,
+      "id": 771,
       "version": 2,
       "component_based": false
     },
@@ -4724,7 +4772,7 @@
     },
     {
       "name": "minecraft:frog_spawn_egg",
-      "id": 665,
+      "id": 664,
       "version": 2,
       "component_based": false
     },
@@ -4831,8 +4879,14 @@
       "component_based": false
     },
     {
+      "name": "minecraft:birch_shelf",
+      "id": -1049,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:mangrove_sign",
-      "id": 671,
+      "id": 670,
       "version": 2,
       "component_based": false
     },
@@ -4915,6 +4969,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_copper_golem_statue",
+      "id": -1043,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:chain_command_block",
       "id": 189,
       "version": 2,
@@ -4946,7 +5006,7 @@
     },
     {
       "name": "minecraft:eye_armor_trim_smithing_template",
-      "id": 723,
+      "id": 722,
       "version": 2,
       "component_based": false
     },
@@ -5036,7 +5096,7 @@
     },
     {
       "name": "minecraft:nether_sprouts",
-      "id": 658,
+      "id": 657,
       "version": 2,
       "component_based": true
     },
@@ -5060,7 +5120,7 @@
     },
     {
       "name": "minecraft:scrape_pottery_sherd",
-      "id": 711,
+      "id": 710,
       "version": 2,
       "component_based": false
     },
@@ -5078,13 +5138,13 @@
     },
     {
       "name": "minecraft:amethyst_shard",
-      "id": 661,
+      "id": 660,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:music_disc_otherside",
-      "id": 663,
+      "id": 662,
       "version": 2,
       "component_based": true
     },
@@ -5096,13 +5156,13 @@
     },
     {
       "name": "minecraft:howl_pottery_sherd",
-      "id": 706,
+      "id": 705,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:birch_chest_boat",
-      "id": 676,
+      "id": 675,
       "version": 2,
       "component_based": false
     },
@@ -5120,7 +5180,7 @@
     },
     {
       "name": "minecraft:goat_horn",
-      "id": 664,
+      "id": 663,
       "version": 2,
       "component_based": false
     },
@@ -5138,7 +5198,7 @@
     },
     {
       "name": "minecraft:allay_spawn_egg",
-      "id": 668,
+      "id": 667,
       "version": 2,
       "component_based": false
     },
@@ -5174,7 +5234,7 @@
     },
     {
       "name": "minecraft:music_disc_5",
-      "id": 673,
+      "id": 672,
       "version": 2,
       "component_based": true
     },
@@ -5186,7 +5246,7 @@
     },
     {
       "name": "minecraft:disc_fragment_5",
-      "id": 674,
+      "id": 673,
       "version": 2,
       "component_based": false
     },
@@ -5216,7 +5276,7 @@
     },
     {
       "name": "minecraft:jungle_chest_boat",
-      "id": 677,
+      "id": 676,
       "version": 2,
       "component_based": false
     },
@@ -5228,7 +5288,7 @@
     },
     {
       "name": "minecraft:spruce_chest_boat",
-      "id": 678,
+      "id": 677,
       "version": 2,
       "component_based": false
     },
@@ -5239,20 +5299,20 @@
       "component_based": false
     },
     {
-      "name": "minecraft:acacia_chest_boat",
-      "id": 679,
+      "name": "minecraft:spire_armor_trim_smithing_template",
+      "id": 727,
       "version": 2,
       "component_based": false
     },
     {
-      "name": "minecraft:spire_armor_trim_smithing_template",
-      "id": 728,
+      "name": "minecraft:acacia_chest_boat",
+      "id": 678,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:dark_oak_chest_boat",
-      "id": 680,
+      "id": 679,
       "version": 2,
       "component_based": false
     },
@@ -5264,7 +5324,7 @@
     },
     {
       "name": "minecraft:mangrove_chest_boat",
-      "id": 681,
+      "id": 680,
       "version": 2,
       "component_based": false
     },
@@ -5282,7 +5342,7 @@
     },
     {
       "name": "minecraft:recovery_compass",
-      "id": 683,
+      "id": 682,
       "version": 2,
       "component_based": false
     },
@@ -5294,13 +5354,13 @@
     },
     {
       "name": "minecraft:chest_boat",
-      "id": 682,
+      "id": 681,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:echo_shard",
-      "id": 684,
+      "id": 683,
       "version": 2,
       "component_based": false
     },
@@ -5318,7 +5378,7 @@
     },
     {
       "name": "minecraft:trader_llama_spawn_egg",
-      "id": 685,
+      "id": 684,
       "version": 2,
       "component_based": false
     },
@@ -5336,7 +5396,7 @@
     },
     {
       "name": "minecraft:cherry_boat",
-      "id": 686,
+      "id": 685,
       "version": 2,
       "component_based": false
     },
@@ -5378,13 +5438,13 @@
     },
     {
       "name": "minecraft:bamboo_raft",
-      "id": 690,
+      "id": 689,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:bamboo_chest_raft",
-      "id": 691,
+      "id": 690,
       "version": 2,
       "component_based": false
     },
@@ -5401,6 +5461,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:crimson_shelf",
+      "id": -1057,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:quartz_stairs",
       "id": 156,
       "version": 2,
@@ -5408,7 +5474,7 @@
     },
     {
       "name": "minecraft:explorer_pottery_sherd",
-      "id": 700,
+      "id": 699,
       "version": 2,
       "component_based": false
     },
@@ -5468,7 +5534,7 @@
     },
     {
       "name": "minecraft:archer_pottery_sherd",
-      "id": 694,
+      "id": 693,
       "version": 2,
       "component_based": false
     },
@@ -5480,31 +5546,31 @@
     },
     {
       "name": "minecraft:blade_pottery_sherd",
-      "id": 696,
+      "id": 695,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:danger_pottery_sherd",
-      "id": 699,
+      "id": 698,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:flow_pottery_sherd",
-      "id": 701,
+      "id": 700,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:friend_pottery_sherd",
-      "id": 702,
+      "id": 701,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:guster_pottery_sherd",
-      "id": 703,
+      "id": 702,
       "version": 2,
       "component_based": false
     },
@@ -5516,13 +5582,13 @@
     },
     {
       "name": "minecraft:heart_pottery_sherd",
-      "id": 704,
+      "id": 703,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:sheaf_pottery_sherd",
-      "id": 712,
+      "id": 711,
       "version": 2,
       "component_based": false
     },
@@ -5552,19 +5618,19 @@
     },
     {
       "name": "minecraft:shelter_pottery_sherd",
-      "id": 713,
+      "id": 712,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:sentry_armor_trim_smithing_template",
-      "id": 718,
+      "id": 717,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:ward_armor_trim_smithing_template",
-      "id": 722,
+      "id": 721,
       "version": 2,
       "component_based": false
     },
@@ -5582,13 +5648,13 @@
     },
     {
       "name": "minecraft:tide_armor_trim_smithing_template",
-      "id": 725,
+      "id": 724,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:wayfinder_armor_trim_smithing_template",
-      "id": 730,
+      "id": 729,
       "version": 2,
       "component_based": false
     },
@@ -5600,7 +5666,7 @@
     },
     {
       "name": "minecraft:raiser_armor_trim_smithing_template",
-      "id": 731,
+      "id": 730,
       "version": 2,
       "component_based": false
     },
@@ -5618,7 +5684,7 @@
     },
     {
       "name": "minecraft:shaper_armor_trim_smithing_template",
-      "id": 732,
+      "id": 731,
       "version": 2,
       "component_based": false
     },
@@ -5630,7 +5696,7 @@
     },
     {
       "name": "minecraft:bolt_armor_trim_smithing_template",
-      "id": 735,
+      "id": 734,
       "version": 2,
       "component_based": false
     },
@@ -5642,9 +5708,15 @@
     },
     {
       "name": "minecraft:music_disc_relic",
-      "id": 736,
+      "id": 735,
       "version": 2,
       "component_based": true
+    },
+    {
+      "name": "minecraft:weathered_copper_golem_statue",
+      "id": -1041,
+      "version": 2,
+      "component_based": false
     },
     {
       "name": "minecraft:wool",
@@ -5756,7 +5828,7 @@
     },
     {
       "name": "minecraft:skull",
-      "id": 737,
+      "id": 736,
       "version": 2,
       "component_based": false
     },
@@ -5786,7 +5858,7 @@
     },
     {
       "name": "minecraft:copper_nugget",
-      "id": 778,
+      "id": 777,
       "version": 2,
       "component_based": false
     },
@@ -5803,8 +5875,20 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_oxidized_copper_lantern",
+      "id": -1090,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:lime_terracotta",
       "id": -728,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_horse_armor",
+      "id": 778,
       "version": 2,
       "component_based": false
     },
@@ -5864,25 +5948,25 @@
     },
     {
       "name": "minecraft:stained_hardened_clay",
-      "id": 738,
+      "id": 737,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:armadillo_scute",
-      "id": 740,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:armadillo_spawn_egg",
       "id": 739,
       "version": 2,
       "component_based": false
     },
     {
+      "name": "minecraft:armadillo_spawn_egg",
+      "id": 738,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:wolf_armor",
-      "id": 741,
+      "id": 740,
       "version": 2,
       "component_based": true
     },
@@ -6002,7 +6086,7 @@
     },
     {
       "name": "minecraft:pale_oak_boat",
-      "id": 744,
+      "id": 743,
       "version": 2,
       "component_based": false
     },
@@ -6014,7 +6098,7 @@
     },
     {
       "name": "minecraft:pale_oak_sign",
-      "id": 746,
+      "id": 745,
       "version": 2,
       "component_based": false
     },
@@ -6056,7 +6140,7 @@
     },
     {
       "name": "minecraft:blue_egg",
-      "id": 749,
+      "id": 748,
       "version": 2,
       "component_based": false
     },
@@ -6068,25 +6152,25 @@
     },
     {
       "name": "minecraft:brown_egg",
-      "id": 750,
+      "id": 749,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:black_harness",
-      "id": 752,
+      "id": 751,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:blue_harness",
-      "id": 753,
+      "id": 752,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:brown_harness",
-      "id": 754,
+      "id": 753,
       "version": 2,
       "component_based": false
     },
@@ -6098,13 +6182,13 @@
     },
     {
       "name": "minecraft:cyan_harness",
-      "id": 755,
+      "id": 754,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:gray_harness",
-      "id": 756,
+      "id": 755,
       "version": 2,
       "component_based": false
     },
@@ -6122,7 +6206,7 @@
     },
     {
       "name": "minecraft:light_blue_harness",
-      "id": 758,
+      "id": 757,
       "version": 2,
       "component_based": false
     },
@@ -6140,13 +6224,13 @@
     },
     {
       "name": "minecraft:lime_harness",
-      "id": 760,
+      "id": 759,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:orange_harness",
-      "id": 762,
+      "id": 761,
       "version": 2,
       "component_based": false
     },
@@ -6158,7 +6242,7 @@
     },
     {
       "name": "minecraft:pink_harness",
-      "id": 763,
+      "id": 762,
       "version": 2,
       "component_based": false
     },
@@ -6170,13 +6254,13 @@
     },
     {
       "name": "minecraft:purple_harness",
-      "id": 764,
+      "id": 763,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:red_harness",
-      "id": 765,
+      "id": 764,
       "version": 2,
       "component_based": false
     },
@@ -6188,7 +6272,7 @@
     },
     {
       "name": "minecraft:white_harness",
-      "id": 766,
+      "id": 765,
       "version": 2,
       "component_based": false
     },
@@ -6200,13 +6284,13 @@
     },
     {
       "name": "minecraft:copper_golem_spawn_egg",
-      "id": 768,
+      "id": 767,
       "version": 2,
       "component_based": false
     },
     {
       "name": "minecraft:copper_shovel",
-      "id": 770,
+      "id": 769,
       "version": 2,
       "component_based": false
     },
@@ -6224,7 +6308,7 @@
     },
     {
       "name": "minecraft:copper_pickaxe",
-      "id": 771,
+      "id": 770,
       "version": 2,
       "component_based": false
     },
@@ -6254,7 +6338,7 @@
     },
     {
       "name": "minecraft:copper_hoe",
-      "id": 773,
+      "id": 772,
       "version": 2,
       "component_based": false
     },
@@ -6266,7 +6350,7 @@
     },
     {
       "name": "minecraft:copper_helmet",
-      "id": 774,
+      "id": 773,
       "version": 2,
       "component_based": false
     },
@@ -6278,7 +6362,7 @@
     },
     {
       "name": "minecraft:copper_chestplate",
-      "id": 775,
+      "id": 774,
       "version": 2,
       "component_based": false
     },
@@ -6308,7 +6392,7 @@
     },
     {
       "name": "minecraft:copper_leggings",
-      "id": 776,
+      "id": 775,
       "version": 2,
       "component_based": false
     },
@@ -6326,7 +6410,7 @@
     },
     {
       "name": "minecraft:copper_boots",
-      "id": 777,
+      "id": 776,
       "version": 2,
       "component_based": false
     },
@@ -6553,6 +6637,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:oxidized_copper_golem_statue",
+      "id": -1042,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:stone_bricks",
       "id": 98,
       "version": 2,
@@ -6609,6 +6699,12 @@
     {
       "name": "minecraft:dead_tube_coral_block",
       "id": -853,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:oxidized_copper_lantern",
+      "id": -1086,
       "version": 2,
       "component_based": false
     },
@@ -8113,6 +8209,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:mangrove_shelf",
+      "id": -1053,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:light_block_3",
       "id": -931,
       "version": 2,
@@ -8175,6 +8277,12 @@
     {
       "name": "minecraft:light_block_9",
       "id": -937,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_oxidized_copper_bars",
+      "id": -1073,
       "version": 2,
       "component_based": false
     },
@@ -8647,8 +8755,20 @@
       "component_based": false
     },
     {
+      "name": "minecraft:weathered_copper_bars",
+      "id": -1068,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:element_81",
       "id": -92,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:exposed_lightning_rod",
+      "id": -1059,
       "version": 2,
       "component_based": false
     },
@@ -8905,6 +9025,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_weathered_copper_chain",
+      "id": -1080,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:waxed_weathered_copper_chest",
       "id": -1037,
       "version": 2,
@@ -8997,6 +9123,12 @@
     {
       "name": "minecraft:hanging_roots",
       "id": -319,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_exposed_copper_chain",
+      "id": -1079,
       "version": 2,
       "component_based": false
     },
@@ -9115,6 +9247,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:oxidized_lightning_rod",
+      "id": -1061,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:amethyst_block",
       "id": -327,
       "version": 2,
@@ -9211,8 +9349,20 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_copper_bars",
+      "id": -1070,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:stone_button",
       "id": 77,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:jungle_shelf",
+      "id": -1050,
       "version": 2,
       "component_based": false
     },
@@ -9367,6 +9517,18 @@
       "component_based": false
     },
     {
+      "name": "minecraft:deepslate_tile_stairs",
+      "id": -389,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:oxidized_copper_bars",
+      "id": -1069,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:orange_glazed_terracotta",
       "id": 221,
       "version": 2,
@@ -9439,8 +9601,32 @@
       "component_based": false
     },
     {
+      "name": "minecraft:exposed_copper_lantern",
+      "id": -1084,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:waxed_copper_trapdoor",
       "id": -796,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_trapdoor",
+      "id": -792,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_exposed_copper_bars",
+      "id": -1071,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:spruce_shelf",
+      "id": -1048,
       "version": 2,
       "component_based": false
     },
@@ -9495,6 +9681,24 @@
     {
       "name": "minecraft:sculk_catalyst",
       "id": -460,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_lightning_rod",
+      "id": -1062,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:warped_shelf",
+      "id": -1058,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_bars",
+      "id": -1066,
       "version": 2,
       "component_based": false
     },
@@ -9619,6 +9823,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_weathered_copper_lantern",
+      "id": -1089,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:item.crimson_door",
       "id": -244,
       "version": 2,
@@ -9627,6 +9837,18 @@
     {
       "name": "minecraft:mangrove_pressure_plate",
       "id": -490,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:small_dripleaf_block",
+      "id": -336,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_exposed_lightning_rod",
+      "id": -1063,
       "version": 2,
       "component_based": false
     },
@@ -9667,6 +9889,18 @@
       "component_based": false
     },
     {
+      "name": "minecraft:darkoak_standing_sign",
+      "id": -192,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_exposed_copper_golem_statue",
+      "id": -1044,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:red_glazed_terracotta",
       "id": 234,
       "version": 2,
@@ -9675,6 +9909,12 @@
     {
       "name": "minecraft:waxed_oxidized_copper_chest",
       "id": -1038,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_oxidized_copper_chain",
+      "id": -1081,
       "version": 2,
       "component_based": false
     },
@@ -9715,6 +9955,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:dark_oak_shelf",
+      "id": -1052,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:lit_redstone_ore",
       "id": 74,
       "version": 2,
@@ -9745,6 +9991,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:bamboo_shelf",
+      "id": -1056,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:redstone_ore",
       "id": 73,
       "version": 2,
@@ -9753,6 +10005,12 @@
     {
       "name": "minecraft:waxed_copper_chest",
       "id": -1035,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_copper_chain",
+      "id": -1078,
       "version": 2,
       "component_based": false
     },
@@ -9787,12 +10045,6 @@
       "component_based": false
     },
     {
-      "name": "minecraft:small_dripleaf_block",
-      "id": -336,
-      "version": 2,
-      "component_based": false
-    },
-    {
       "name": "minecraft:waxed_weathered_copper_grate",
       "id": -774,
       "version": 2,
@@ -9819,6 +10071,12 @@
     {
       "name": "minecraft:sculk_sensor",
       "id": -307,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:oak_shelf",
+      "id": -1047,
       "version": 2,
       "component_based": false
     },
@@ -9949,12 +10207,6 @@
       "component_based": false
     },
     {
-      "name": "minecraft:deepslate_tile_stairs",
-      "id": -389,
-      "version": 2,
-      "component_based": false
-    },
-    {
       "name": "minecraft:crimson_fence_gate",
       "id": -258,
       "version": 2,
@@ -9963,6 +10215,12 @@
     {
       "name": "minecraft:deadbush",
       "id": 32,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_weathered_copper_golem_statue",
+      "id": -1045,
       "version": 2,
       "component_based": false
     },
@@ -10063,6 +10321,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_oxidized_copper_golem_statue",
+      "id": -1046,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:dark_oak_stairs",
       "id": 164,
       "version": 2,
@@ -10083,6 +10347,12 @@
     {
       "name": "minecraft:chiseled_deepslate",
       "id": -395,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:weathered_lightning_rod",
+      "id": -1060,
       "version": 2,
       "component_based": false
     },
@@ -10177,6 +10447,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:exposed_copper_chain",
+      "id": -1075,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:waxed_double_cut_copper_slab",
       "id": -372,
       "version": 2,
@@ -10237,6 +10513,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:weathered_copper_chain",
+      "id": -1076,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:glow_lichen",
       "id": -411,
       "version": 2,
@@ -10279,12 +10561,6 @@
       "component_based": false
     },
     {
-      "name": "minecraft:copper_trapdoor",
-      "id": -792,
-      "version": 2,
-      "component_based": false
-    },
-    {
       "name": "minecraft:stripped_acacia_log",
       "id": -8,
       "version": 2,
@@ -10309,8 +10585,8 @@
       "component_based": false
     },
     {
-      "name": "minecraft:item.chain",
-      "id": -286,
+      "name": "minecraft:pale_oak_shelf",
+      "id": -1055,
       "version": 2,
       "component_based": false
     },
@@ -10509,6 +10785,12 @@
     {
       "name": "minecraft:end_brick_stairs",
       "id": -178,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:weathered_copper_lantern",
+      "id": -1085,
       "version": 2,
       "component_based": false
     },
@@ -10729,6 +11011,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_oxidized_lightning_rod",
+      "id": -1065,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:allow",
       "id": 210,
       "version": 2,
@@ -10789,6 +11077,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:iron_chain",
+      "id": -286,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:spore_blossom",
       "id": -321,
       "version": 2,
@@ -10797,12 +11091,6 @@
     {
       "name": "minecraft:crimson_standing_sign",
       "id": -250,
-      "version": 2,
-      "component_based": false
-    },
-    {
-      "name": "minecraft:darkoak_standing_sign",
-      "id": -192,
       "version": 2,
       "component_based": false
     },
@@ -10821,6 +11109,12 @@
     {
       "name": "minecraft:netherreactor",
       "id": 247,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:exposed_copper_golem_statue",
+      "id": -1040,
       "version": 2,
       "component_based": false
     },
@@ -10875,6 +11169,12 @@
     {
       "name": "minecraft:lapis_ore",
       "id": 21,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:waxed_copper_lantern",
+      "id": -1087,
       "version": 2,
       "component_based": false
     },
@@ -10963,6 +11263,12 @@
       "component_based": false
     },
     {
+      "name": "minecraft:waxed_weathered_lightning_rod",
+      "id": -1064,
+      "version": 2,
+      "component_based": false
+    },
+    {
       "name": "minecraft:weathered_copper",
       "id": -342,
       "version": 2,
@@ -11007,6 +11313,12 @@
     {
       "name": "minecraft:stripped_mangrove_log",
       "id": -485,
+      "version": 2,
+      "component_based": false
+    },
+    {
+      "name": "minecraft:copper_lantern",
+      "id": -1083,
       "version": 2,
       "component_based": false
     },
