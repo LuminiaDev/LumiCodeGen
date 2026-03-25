@@ -79,7 +79,6 @@ public class GenericDataUtil {
             try (var reader = new InputStreamReader(inputStream)) {
                 return JsonParser.parseReader(reader)
                         .getAsJsonObject()
-                        .getAsJsonObject("sound_definitions")
                         .asMap()
                         .keySet();
             }
