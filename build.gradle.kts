@@ -26,7 +26,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.koshakmine:Lumi:1.6.3-SNAPSHOT")
+    implementation("com.koshakmine:Lumi:1.6.4-SNAPSHOT")
     implementation("org.cloudburstmc:nbt:3.0.0.Final")
     implementation("com.palantir.javapoet:javapoet:0.7.0")
     implementation("com.google.code.gson:gson:2.13.1")

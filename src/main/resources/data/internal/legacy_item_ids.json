@@ -1380,5 +1380,17 @@
   "minecraft:waxed_weathered_copper_bulb": -782,
   "minecraft:waxed_oxidized_copper_bulb": -783,
   "minecraft:copper_ingot": 519,
-  "minecraft:raw_copper": 522
+  "minecraft:raw_copper": 522,
+  "minecraft:mangrove_propagule_hanging": -476,
+  "minecraft:bamboo_door": -517,
+  "minecraft:cherry_door": -531,
+  "minecraft:cherry_standing_sign": -542,
+  "minecraft:cherry_wall_sign": -544,
+  "minecraft:tuff_double_slab": -745,
+  "minecraft:polished_tuff_double_slab": -750,
+  "minecraft:tuff_brick_double_slab": -756,
+  "minecraft:pale_oak_door": -990,
+  "minecraft:pale_oak_double_slab": -999,
+  "minecraft:pale_oak_standing_sign": -1001,
+  "minecraft:pale_oak_wall_sign": -1003
 }
